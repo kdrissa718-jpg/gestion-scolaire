@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Élève - Inscription</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+
+<body>
+
+    <div class="form-card">
+        <h2>Inscription Élève</h2>
+        <form action="dashboard.html" method="get" class="form-grid">
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-field">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="date_naiss">Date de naissance</label>
+                    <input type="date" id="date_naiss" name="date_naiss" required>
+                </div>
+                <div class="form-field">
+                    <label for="classe">Classe</label>
+                    <input type="text" id="classe" name="classe" required>
+                </div>
+            </div>
+
+            <div class="form1-field">
+                <label for="filiere">Filière</label>
+                <select id="filiere" name="filiere" required>
+                    <option value="" disabled selected>Sélectionnez une filière</option>
+                    <option value="scientifique">Scientifique</option>
+                    <option value="litteraire">Littéraire</option>
+                    <option value="economique">Économique</option>
+                    <option value="informatique">Informatique</option>
+                    <option value="technologique">Technologique</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="pass">Mot de passe</label>
+                    <input type="password" id="pass" name="pass" required>
+                </div>
+                <div class="form-field">
+                    <label for="pass2">Confirmer mot de passe</label>
+                    <input type="password" id="pass2" name="pass2" required>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn" type="submit">S'inscrire</button>
+                <p class="small-note">Les informations restent privées et sécurisées.</p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

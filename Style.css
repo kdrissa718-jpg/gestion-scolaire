@@ -1,0 +1,367 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.face {
+    background-image: url(Images/photo-1580582932707-520aed937b7b.jpeg);
+    border-image-width: 10px;
+    background-repeat: no-repeat;
+    color: blue;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-size: cover;
+    margin-bottom: 0;
+}
+
+.image-box {
+    background-image: url(Images/photo-1580582932707-520aed937b7b.jpeg);
+    /* filter        : blur(3px);*/
+    width: 100%;
+    height: 100px;
+    padding: 49px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 10hv;
+    margin: 0;
+}
+
+.pre {
+    position: relative;
+    bottom: 300px;
+    width: 100px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    margin: 0;
+}
+
+.pre::before {
+    filter: blur(9px);
+    z-index: 0;
+    position: absolute;
+    content: "";
+}
+
+.pre :hover {
+    color: red
+}
+
+.fonct :hover {
+    color: red;
+}
+
+.description {
+    color: black;
+    background-color: rgb(242, 239, 243);
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.description :hover {
+    background-color: blue;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.gras1 {
+    font-weight: bold;
+}
+
+.fonctionalite {
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: justify;
+    font-style: italic;
+    margin: 0;
+}
+
+.inscription {
+
+    border-bottom-left-radius: 4px;
+
+
+}
+
+.inscription :hover {
+    color: rgb(205, 43, 11);
+    background-color: aqua;
+
+}
+
+.connect-btn {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 25px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+
+
+    color: white;
+    background-color: rgb(60, 126, 219);
+    border: 5px ridge rgb(235, 220, 220);
+    border-style: groove;
+    box-shadow: 20px 10px 10px rgb(11, 11, 216);
+
+
+}
+
+.connect-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.formulaire,
+.formulaire1 {
+    color: black;
+    text-align: center;
+    border: 2px groove;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: rgb(210, 211, 214);
+    box-shadow: 10px 10px 10px rgb(119, 119, 239);
+    width: 300px;
+    height: 400px;
+    padding: 400px;
+    font-size: 20px;
+    padding: 20px;
+    background-color: rgb(225, 229, 231);
+    margin: auto;
+
+}
+
+.formulaire,
+.formulaire1 {
+    position: center;
+
+}
+
+
+.fond {
+    background-image: url(Images/photo-1509062522246-3755977927d7.jpeg);
+    background-repeat: no-repeat;
+    width: 1150px;
+    height: 400px;
+    background-size: 100%;
+    background-size: cover;
+}
+
+.titre {
+    color: blue;
+    text-shadow: 2px 2px 2px rgb(197, 112, 15);
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: double;
+}
+
+.titre {
+    padding: 50px;
+    margin: 50px;
+    width: 1000px;
+    height: 20px;
+    background-color: rgb(228, 243, 238);
+}
+
+.sous-titre {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 1px rgb(230, 156, 20);
+}
+
+.complexe {
+    font-size: 15px;
+    color: rgb(45, 8, 230);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 250px;
+    height: 20px;
+    padding: 5px;
+    background-color: bisque;
+    position: relative;
+    left: 50px;
+
+}
+
+.quartier {
+    font-size: 15px;
+    color: rgb(2, 1, 7);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 350px;
+    height: 20px;
+    padding: 5px;
+    background-color: bisque;
+    width: 250px;
+    height: 20px;
+    padding: 5px;
+    font-style: italic;
+}
+
+.el,
+.tb,
+.ajoute,
+.prof,
+.aj,
+.cl,
+.ajou,
+.ajout,
+.ab,
+.pree,
+.ap,
+.car,
+.cat,
+.nous,
+.acti,
+.bul,
+.em,
+.me,
+.an,
+.st,
+.de,
+.not {
+    background-color: rgb(180, 180, 244);
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 200px;
+    height: 60px;
+
+    font-size: 25px;
+    text-decoration: none;
+    font-size: 18px;
+
+}
+
+.el,
+.tb,
+.ajoute,
+.prof,
+.aj,
+.cl,
+.ajou,
+.ajout,
+.ab,
+.pree,
+.ap,
+.car,
+.cat,
+.nous,
+.acti,
+.bul,
+.em,
+.me,
+.an,
+.st,
+.de,
+.not {
+    border-radius: 100px;
+    border-style: dashed;
+    border-color: black;
+    border-width: 0px;
+}
+
+
+.contenu:hover {
+    color: brown;
+}
+
+/*
+.vue1, .vue2, .vue3 {
+    padding: 100px;
+    margin: 100px;
+    width: 100px;
+    background-color: antiquewhite;
+    bottom: 400px;
+    display: inline block;
+}
+*/
+
+
+
+.eleve-inscrit,
+.absence-justifie,
+.annonces {
+    padding: 30px;
+    margin-left: 30%;
+    width: 100px;
+    background-color: antiquewhite;
+
+}
+
+
+.se-connecter,
+.inscrire {
+    background-color: blue;
+    color: white;
+    border-radius: 0px;
+}
+
+
+.mediaa {
+    background-color: yellow;
+
+}
+
+@media screen and (max-width: 680px) {
+    .mediaa {
+        background-color: green;
+    }
+
+}
+
+@media screen and (min-width:681px) and (max-width: 6172px) {
+    .mediaa {
+        background-color: blue;
+    }
+
+    .titre {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .face, .pre, .fonctionalite, .titre, .sous-titre, .complexe, .quartier {
+        font-size: 2vw;
+    }
+    .formulaire, .formulaire1 {
+        width: 90%;
+        padding: 10px;
+    }
+    .connect-btn {
+        font-size: 4vw;
+    }
+    .image-box {
+        height: 50px;
+    }
+    #footer {
+        height: auto;
+        padding: 10px;
+    }
+}
+
+.welcome {
+    margin-top: 0;
+}
+
+#footer {
+
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    border-color: 1px solid black;
+    text-align: center;
+    background-color: #ccc;
+}

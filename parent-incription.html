@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parent - Inscription</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="form-style.css">
+</head>
+
+<body>
+
+    <div class="form-card">
+        <h2>Inscription Parent</h2>
+        <form action="dashboard.html" method="get" class="form-grid">
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="prenom">Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                <div class="form-field">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+            </div>
+
+            <div class="form-field">
+                <label>Sexe</label>
+                <div style="display:flex;gap:12px;align-items:center;">
+                    <label><input type="radio" name="sexe" value="homme" required> Homme</label>
+                    <label><input type="radio" name="sexe" value="femme"> Femme</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-field">
+                    <label for="pass">Mot de passe</label>
+                    <input type="password" id="pass" name="pass" required>
+                </div>
+                <div class="form-field">
+                    <label for="pass2">Confirmer mot de passe</label>
+                    <input type="password" id="pass2" name="pass2" required>
+                </div>
+            </div>
+
+            <div>
+                <button class="btn" type="submit">S'inscrire</button>
+                <p class="small-note">Les informations seront utilisées uniquement pour la gestion scolaire.</p>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

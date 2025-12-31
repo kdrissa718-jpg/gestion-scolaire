@@ -1,0 +1,82 @@
+:root{
+  --primary: #0f4c75;
+  --accent: #ffd166;
+  --muted: #9fb3c8;
+  --card-bg: rgba(7,22,34,0.6);
+  --glass: rgba(255,255,255,0.03);
+  --text-light: #eaf2f7;
+}
+
+/* Reset basique */
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Arial, Helvetica, sans-serif;background:#f5f7fa;color:var(--primary)}
+
+/* Conteneur principal des pages */
+.page-wrap{max-width:1100px;margin:28px auto;padding:18px}
+
+/* Wrapper utilisé pour décaler le contenu quand une sidebar est présente */
+.content{margin-left:270px;padding:30px;flex:1}
+
+/* Cartes / boîtes */
+.container{display:flex;flex-wrap:wrap;gap:18px}
+.box{flex:1 1 320px;background:var(--card-bg);color:var(--text-light);padding:16px;border-radius:10px;box-shadow:0 8px 24px rgba(2,12,27,0.4);border:1px solid rgba(255,255,255,0.04)}
+
+h1,h2,h3{color:var(--primary);margin:0 0 12px}
+h1{font-size:24px}
+
+/* Tableaux lisibles */
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden}
+th,td{padding:10px 12px;border-bottom:1px solid #e7eef6;text-align:left;color:#0b2533}
+th{background:linear-gradient(90deg,var(--primary),var(--primary));color:#fff}.heure{width:160px;font-weight:700;background:#f3f6f8}
+
+/* Formulaires */
+input, textarea, select, input[type="text"], input[type="date"], input[type="password"]{width:100%;padding:10px;border-radius:8px;border:1px solid #d7e3ea;background:var(--glass);color:var(--text-light)}
+label{display:block;margin:8px 0 6px;color:var(--text-light);font-weight:600}
+button, .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+
+.form-row{display:flex;gap:12px}
+.form-row .box{flex:1}
+
+.help{margin-top:12px;color:#5b6b77}
+
+/* Contact */
+.contact-container{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.contact-box{background:#fff;padding:14px;border-radius:10px}
+
+/* Responsive */
+@media (max-width:900px){.container{flex-direction:column}.contact-container{grid-template-columns:1fr}.form-row{flex-direction:column}}
+
+/* Styles spécifiques pour l'emploi du temps et contrôles */
+.edt-controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.edt-controls label{color:var(--primary);font-weight:700}
+.btn.secondary{background:transparent;color:var(--primary);border:1px solid rgba(15,76,117,0.12)}
+
+.page-wrap h2{font-size:22px;color:var(--primary);margin:0 0 12px}
+
+#emploiDuTemps{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(2,12,27,0.06)}
+#emploiDuTemps thead th{background:linear-gradient(90deg,var(--primary),#0b6b9a);color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:2}
+#emploiDuTemps th, #emploiDuTemps td{padding:12px;border-bottom:1px solid #eef4f8;vertical-align:middle}
+#emploiDuTemps tbody tr:nth-child(even){background:#fbfdff}
+#emploiDuTemps td{min-width:120px;white-space:pre-wrap;word-break:break-word;cursor:pointer;transition:background .12s}
+#emploiDuTemps td:hover{background:rgba(15,76,117,0.04)}
+#emploiDuTemps th:first-child, #emploiDuTemps td:first-child{background:#f7fafc;color:#0b2533;font-weight:700;position:sticky;left:0;z-index:3}
+
+@media (max-width:900px){
+  #emploiDuTemps{display:block;overflow:auto;min-width:640px}
+}
+
+/* petite touche d'aération pour le contenu */
+.content{padding:20px 28px}
+
+/* Cards view for each timeslot */
+.cards-view{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+.slot-card{background:#fff;border-radius:10px;padding:12px;box-shadow:0 6px 18px rgba(2,12,27,0.06);border:1px solid rgba(0,0,0,0.04)}
+.slot-header{font-weight:800;color:var(--primary);margin-bottom:8px}
+.slot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.pill{padding:8px;border-radius:8px;color:#072033;display:flex;flex-direction:column;gap:6px}
+.pill-day{font-size:12px;font-weight:700}
+.pill-content{font-size:14px}
+
+@media (max-width:900px){.cards-view{grid-template-columns:1fr}.slot-grid{grid-template-columns:repeat(2,1fr)}}
+
+

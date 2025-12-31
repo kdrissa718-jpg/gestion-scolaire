@@ -1,0 +1,374 @@
+:root{
+    --primary: #0f4c75;
+    --primary-variant: #1282a2;
+    --bg-card: rgba(7,22,34,0.62);
+    --muted: #9fb3c8;
+    --accent: #ffd166;
+    --text-light: #ffffff;
+    --text-muted: #d0d6db;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('Images/photo-1580582932707-520aed937b7b.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--text-muted);
+}
+
+/* Overlay sombre pour améliorer le contraste du texte */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(2,12,27,0.55), rgba(7,22,34,0.66));
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Assurer que la plupart des éléments de contenu s'affichent au-dessus de l'overlay */
+nav, header, main, footer {
+    position: relative;
+    z-index: 2;
+}
+
+/* Titres et en-tête */
+header {
+    background-color: transparent;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+.face {
+    color: var(--accent);
+    font-size: 30px;
+    text-shadow: 0 10px 30px rgba(2,12,27,0.6);
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+}
+
+/* Bloc d'accueil mis en valeur */
+.welcome .pre {
+    background: var(--bg-card);
+    color: var(--text-light);
+    padding: 22px 26px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(2,12,27,0.6);
+    max-width: 980px;
+    margin: 20px auto;
+    font-size: 18px;
+    line-height: 1.7;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* About-section headings: centered, yellow, hover background */
+.about-site .container h2,
+.about-site .container h3 {
+    color: var(--accent);
+    text-align: center;
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 10px;
+    margin: 12px 0;
+    transition: background-color 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.about-site .container h2 { font-size: 26px; }
+.about-site .container h3 { font-size: 20px; }
+
+.about-site .container h2:hover,
+.about-site .container h3:hover {
+    background: rgba(255,209,102,0.14); /* subtle yellow background on hover */
+    color: var(--text-light);
+    transform: translateY(-4px);
+}
+
+/* Ensure headings are centered while body text remains left-aligned */
+.about-site .container { max-width: 980px; margin: 20px auto; }
+.about-site .container p,
+.about-site .container ol,
+.about-site .container ul {
+    text-align: left;
+    color: var(--text-light);
+    font-size: 16px;
+    line-height: 1.85;
+    font-weight: 500;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(2,12,27,0.5);
+}
+
+.about-site .container ol,
+.about-site .container ul {
+    padding-left: 1.05rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+
+.about-site .container li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+/* Styles pour la liste des fonctionnalités */
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.features .fonct {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    background: rgba(16,62,86,0.45);
+    color: var(--text-light);
+    padding: 12px 16px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    max-width: 880px;
+    box-shadow: 0 10px 30px rgba(2,12,27,0.45);
+    border: 1px solid rgba(255,255,255,0.02);
+}
+
+.features .fonct i {
+    margin-right: 12px;
+    color: var(--primary-variant);
+    font-size: 20px;
+}
+
+.features .fonct:last-child { margin-bottom: 6px; }
+
+/* Liens de contenu */
+/* Liens de contenu */
+main a, .welcome a {
+    color: var(--primary-variant);
+    text-decoration: underline;
+}
+
+/* S'assurer que le footer reste lisible */
+/* S'assurer que la navigation reste lisible */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+/* S'assurer que la navigation reste au-dessus de l'overlay */
+nav {
+    position: relative;
+    z-index: 10020;
+}
+ 
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    list-style-type: none;
+    z-index: 10025; /* dropdowns au-dessus de l'overlay et des autres éléments */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav ul li ul.dropdown li {
+    margin: 0;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px 20px;
+    color: var(--text-light);
+    text-decoration: none;
+    display: block;
+}
+
+nav ul li ul.dropdown li a:hover {
+    background-color: #555;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 10px 20px;
+    display: block;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    text-decoration: none;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features .fonct {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.features .fonct i {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #0b2230;
+    color: #e6eef2;
+    padding: 40px 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col h4 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer-col p,
+.footer-col li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d0d0d0;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    color: #cfd8dc;
+    text-decoration: none;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.social-list li + li {
+    margin-top: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 18px;
+    padding-top: 12px;
+    text-align: center;
+    color: #bdbdbd;
+    font-size: 13px;
+}
+
+@media (max-width: 980px) {
+    .footer-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 12px;
+    }
+    .footer-col h4 { font-size: 15px; }
+}
+
+/* Styles pour le bouton WhatsApp flottant */
+.whatsapp-float {
+    position: fixed;
+    width: 64px;
+    height: 64px;
+    bottom: 24px;
+    right: 24px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    z-index: 99999;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.18s cubic-bezier(.2,.8,.2,1), box-shadow 0.18s;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+.whatsapp-float:active {
+    transform: translateY(2px) scale(0.98);
+}
+
+.whatsapp-icon {
+    width: 36px;
+    height: 36px;
+    fill: #fff;
+}
+
+@media (max-width: 480px) {
+    .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        bottom: 72px;
+        right: 16px;
+    }
+    .whatsapp-icon {
+        width: 30px;
+        height: 30px;
+      
+    }
+}

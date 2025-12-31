@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Eleve</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="css/contenu.css">
+                 <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    </head>
+    <body>
+
+
+
+<div class="layout">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html" class="Tableauu"><i class="fas fa-tachometer-alt"></i> Tableau de bord</li>
+                <li><a href="eleve.html" class="ajoute"><i class="fas fa-user-plus"></i> Ajouter un élève</a></li>
+                <li><a href="professeur.html" class="aj"><i class="fas fa-chalkboard-teacher"></i> Ajouter un Professeur</a></li>
+                <li><a href="classe.html" class="ajou"><i class="fas fa-school"></i> Ajouter une Classe</a></li>
+                <li><a href="absence.html" class="ajout"><i class="fas fa-user-times"></i> Ajouter un cas d'absence</a></li>
+                <li><a href="presence.html" class="ap"><i class="fas fa-user-check"></i> Ajouter une Présence</a></li>
+                <li><a href="carnet-de-liaison.html" class="car"><i class="fas fa-book"></i> Carnet de liaison</a></li>
+                <li><a href="activite.html" class="acti"><i class="fas fa-running"></i> Activités</a></li>
+                <li><a href="note.html" class="not"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="bulletin.html" class="bul"><i class="fas fa-file-alt"></i> Bulletin</a></li>
+                <li><a href="emploi-du-temps.html" class="em"><i class="fas fa-calendar-alt"></i> Emploi du temps</a></li>
+                <li><a href="message.html" class="me"><i class="fas fa-envelope"></i> Message</a></li>
+                <li><a href="annonce.html" class="an"><i class="fas fa-bullhorn"></i> Annonces</a></li>
+                <li><a href="statistique.html" class="st"><i class="fas fa-chart-bar"></i> Statistiques</a></li>
+                <li><a href="nous-contacter.html" class="nous"><i class="fas fa-phone"></i> Nous contacter</a></li>
+                <li><a href="index.html" class="de"><i class="fas fa-sign-out-alt"></i> Déconnecter</a></li><br>
+            </ul>
+        </aside>
+    </div>
+
+    <div class="content">
+
+
+
+
+
+
+    <div class="page-wrap">
+
+        <h1> Bienvenu sur la page Élève</h1>
+
+
+<h2>Recherche d’un élève</h2>
+
+<!-- Formulaire de recherche -->
+<input type="text" id="recherche" placeholder="Rechercher un élève (nom, prénom, matricule...)">
+
+<!-- Liste des élèves -->
+<table id="tableEleves">
+    <tr>
+        <th>Matricule</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Classe</th>
+    </tr>
+
+    <tr>
+        <td>EL001</td>
+        <td>Traoré</td>
+        <td>Moussa</td>
+        <td>6e A</td>
+    </tr>
+
+    <tr>
+        <td>EL002</td>
+        <td>Diallo</td>
+        <td>Aminata</td>
+        <td>5e B</td>
+    </tr>
+
+    <tr>
+        <td>EL003</td>
+        <td>Koné</td>
+        <td>Drissa</td>
+        <td>4e C</td>
+    </tr>
+</table>
+
+<div class="container">
+
+    <!-- CONTENAIRE 1 : INFORMATIONS DE L'ÉLÈVE -->
+    <div class="box">
+        <h3>Informations de l’élève</h3>
+
+        <form>
+            <label>ID de l’élève</label>
+            <input type="text" name="id_eleve" required>
+
+            <label>Nom</label>
+            <input type="text" name="nom" required>
+
+            <label>Prénom</label>
+            <input type="text" name="prenom" required>
+
+            <label>Date de naissance</label>
+            <input type="date" name="date_naissance" required>
+
+            <label>Classe</label>
+            <select name="classe" required>
+                <option value="">-- Choisir la classe --</option>
+                <option>6e A</option>
+                <option>6e B</option>
+                <option>5e A</option>
+                <option>5e B</option>
+                <option>4e A</option>
+                <option>3e A</option>
+            </select>
+
+            <label>Adresse</label>
+            <textarea name="adresse" rows="3"></textarea>
+        </form>
+    </div>
+
+    <!-- CONTENAIRE 2 : INFORMATIONS DU PARENT / TUTEUR -->
+    <div class="box">
+        <h3>Informations du parent / tuteur</h3>
+
+        <form>
+            <label>Nom</label>
+            <input type="text" name="nom_parent" required>
+
+            <label>Prénom</label>
+            <input type="text" name="prenom_parent" required>
+
+            <label>Email</label>
+            <input type="email" name="email_parent">
+
+            <label>Téléphone</label>
+            <input type="tel" name="telephone_parent" required>
+
+            <label>Adresse</label>
+            <textarea name="adresse_parent" rows="3"></textarea>
+
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+
+
+    </div>
+
+</div>
+    </body>
+</html>

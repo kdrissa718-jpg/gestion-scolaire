@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page d'Activités</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/contenu.css">
+               <link rel="stylesheet" href="Style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    </head>
+    <body>
+ <div class="layout">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="dashboard.html" class="Tableauu"><i class="fas fa-tachometer-alt"></i> Tableau de bord</li>
+                <li><a href="eleve.html" class="ajoute" target="framedashboard"><i class="fas fa-user-plus"></i> Ajouter un élève</a></li>
+                <li><a href="professeur.html" class="aj"><i class="fas fa-chalkboard-teacher"></i> Ajouter un Professeur</a></li>
+                <li><a href="classe.html" class="ajou"><i class="fas fa-school"></i> Ajouter une Classe</a></li>
+                <li><a href="absence.html" class="ajout"><i class="fas fa-user-times"></i> Ajouter un cas d'absence</a></li>
+                <li><a href="presence.html" class="ap"><i class="fas fa-user-check"></i> Ajouter une Présence</a></li>
+                <li><a href="carnet-de-liaison.html" class="car"><i class="fas fa-book"></i> Carnet de liaison</a></li>
+                <li><a href="activite.html" class="acti"><i class="fas fa-running"></i> Activités</a></li>
+                <li><a href="note.html" class="not"><i class="fas fa-sticky-note"></i> Notes</a></li>
+                <li><a href="bulletin.html" class="bul"><i class="fas fa-file-alt"></i> Bulletin</a></li>
+                <li><a href="emploi-du-temps.html" class="em"><i class="fas fa-calendar-alt"></i> Emploi du temps</a></li>
+                <li><a href="message.html" class="me"><i class="fas fa-envelope"></i> Message</a></li>
+                <li><a href="annonce.html" class="an"><i class="fas fa-bullhorn"></i> Annonces</a></li>
+                <li><a href="statistique.html" class="st"><i class="fas fa-chart-bar"></i> Statistiques</a></li>
+                <li><a href="nous-contacter.html" class="nous"><i class="fas fa-phone"></i> Nous contacter</a></li>
+                <li><a href="index.html" class="de"><i class="fas fa-sign-out-alt"></i> Déconnecter</a></li><br>
+            </ul>
+        </aside>
+    </div>
+
+    <div class="content">
+
+
+
+
+
+
+
+
+
+
+
+        <div class="page-wrap">
+
+        <h1> Bienvenu sur la Page d'Activités</h1>
+
+
+<div class="container">
+
+    <!-- AFFICHAGE & RECHERCHE ACTIVITÉ -->
+    <div class="box">
+        <h3>Liste des activités</h3>
+
+        <input type="text" id="rechercheActivite"
+               placeholder="Rechercher une activité, type ou domaine">
+
+        <table id="tableActivite">
+            <tr>
+                <th>ID</th>
+                <th>Activité</th>
+                <th>Date</th>
+                <th>Jour</th>
+                <th>Heure</th>
+                <th>Type</th>
+                <th>Domaine</th>
+            </tr>
+
+            <tr>
+                <td>ACT001</td>
+                <td>Journée culturelle</td>
+                <td>20/03/2025</td>
+                <td>Jeudi</td>
+                <td>09h00 - 12h00</td>
+                <td>Parascolaire</td>
+                <td>Culture</td>
+            </tr>
+
+            <tr>
+                <td>ACT002</td>
+                <td>Match de football</td>
+                <td>25/03/2025</td>
+                <td>Dimanche</td>
+                <td>15h00 - 17h00</td>
+                <td>Sportive</td>
+                <td>Sport</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- AJOUT ACTIVITÉ -->
+    <div class="box">
+        <h3>Ajouter une activité</h3>
+
+        <form>
+            <label>ID de l’activité</label>
+            <input type="text" name="id_activite" required>
+
+            <label>Nom de l’activité</label>
+            <input type="text" name="nom_activite" required>
+
+            <label>Date de l’activité</label>
+            <input type="date" name="date_activite" required>
+
+            <label>Jour</label>
+            <select name="jour" required>
+                <option value="">-- Choisir le jour --</option>
+                <option>Lundi</option>
+                <option>Mardi</option>
+                <option>Mercredi</option>
+                <option>Jeudi</option>
+                <option>Vendredi</option>
+                <option>Samedi</option>
+                <option>Dimanche</option>
+            </select>
+
+            <label>Heure</label>
+            <input type="text" name="heure" placeholder="Ex : 08h00 - 10h00" required>
+
+            <label>Type d’activité</label>
+            <select name="type_activite" required>
+                <option value="">-- Choisir le type --</option>
+                <option>Pédagogique</option>
+                <option>Parascolaire</option>
+                <option>Sportive</option>
+                <option>Culturelle</option>
+                <option>Administrative</option>
+            </select>
+
+            <label>Domaine</label>
+            <select name="domaine" required>
+                <option value="">-- Choisir le domaine --</option>
+                <option>Éducation</option>
+                <option>Sport</option>
+                <option>Culture</option>
+                <option>Santé</option>
+                <option>Citoyenneté</option>
+            </select>
+
+            <button type="submit">Enregistrer</button>
+        </form>
+    </div>
+
+</div>
+
+
+
+
+        </div>
+
+    </div>
+        </body>
+    </html>

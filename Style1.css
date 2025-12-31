@@ -1,0 +1,255 @@
+body {
+
+    background: -moz-linear-gradient(rgb(167, 167, 225), rgb(142, 187, 231), rgb(112, 207, 230));
+    background: -o-linear-gradient(rgb(176, 176, 246), rgb(127, 188, 231), rgb(129, 190, 240));
+    background: -webkit-linear-gradient(rgb(189, 189, 228), rgb(163, 191, 233), rgb(129, 189, 230));
+    background: linear-gradient(rgb(145, 145, 210), rgb(188, 222, 235), rgb(198, 224, 237));
+
+
+}
+
+.fond {
+
+    color: white;
+
+}
+
+.admin,
+.professeur,
+.eleve,
+.parent-eleve {
+    text-decoration: none;
+    color          : white;
+    padding        : 20px;
+    border-radius  : 0px black;
+}
+
+.cards {
+
+    display    : flex;
+    gap        : 20px;
+    flex-wrap  : wrap;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    padding         : 20px;
+    border-radius   : 20px;
+    width           : 250px;
+    border          : 1px solid#eee;
+    box-shadow      : 0 3px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.card h3 {
+    margin     : 0px;
+    color      : #333;
+    font-weight: 200px;
+    font-size  : 18px;
+}
+
+.crd .value {
+    font-size  : 32px;
+    font-weight: bold;
+    margin-top : 10px;
+
+}
+
+
+
+/* ----- Layout général ----- */
+.layout {
+    display: flex;
+    /* divise la page en 2 colonnes */
+}
+
+/* ----- Sidebar ----- */
+.sidebar {
+    width     : 250px;
+    /* largeur du menu */
+    background: #f4f6fb;
+    padding   : 20px;
+    height    : 100vh;
+    /* prend toute la hauteur */
+    position  : fixed;
+    /* reste collée à gauche */
+    left      : 0;
+    top       : 0;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding   : 0;
+   
+}
+
+.sidebar li {
+    margin   : 15px 0;
+    font-size: 18px;
+    width: 250px;
+}
+
+/* ----- Zone de contenu ----- */
+.content {
+    margin-left: 270px;
+    /* espace pour éviter que le contenu passe sous la sidebar */
+    padding    : 30px;
+     flex: 1;
+}
+
+/* ----- Cards ----- */
+.cards {
+    display        : flex;
+    gap            : 20px;
+    flex-wrap      : wrap;
+    justify-content: flex-start;
+    /* aligné à gauche comme sur ton image */
+    margin-top     : 20px;
+}
+
+.card {
+    background   : white;
+    padding      : 30px;
+    border-radius: 20px;
+    width        : 200px;
+    height: 60px;
+    box-shadow   : 0 3px 10px rgba(0, 0, 0, 0.1);
+    border       : 1px solid #eee;
+
+}
+
+.carde{
+    background   : white;
+    padding      : 40px;
+    border-radius: 20px;
+    width        : 300px;
+    height: 150px;
+    box-shadow   : 0 3px 10px rgba(0, 0, 0, 0.1);
+    border       : 1px solid #eee;
+
+}
+
+.carde p{
+    padding: 5px ;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #d3d7f4;
+    text-align: center;
+
+
+}
+
+.card p{
+    font-size: 25px;
+}
+.card h3{
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/* Styles pour les icônes des cartes */
+.card h3 i{
+    margin-right: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+    opacity: 0.95;
+}
+
+
+
+.card.students h3 i{ color: #4e73df; }
+.card.teachers h3 i{ color: #1cc88a; }
+.card.classe h3 i{ color: #f6c23e; }
+.card.absences h3 i{ color: #e74a3b; }
+.card.absence h3 i{ color: #fd7e14; }
+.card.year h3 i{ color: #36b9cc; }
+.carde.activities h3 i{ color: #858796; }
+.carde.actions h3 i{ color: #6f42c1; }
+
+/* Styles pour les icônes dans les paragraphes value1 */
+.value1 i, .value i{
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+    opacity: 0.95;
+}
+
+.carde.activities .value1 i{ color: #4e73df; }
+.carde.activities .value1{ color: #333; }
+.carde.actions .value1 i{ color: #e74a3b; }
+.carde.actions .value1{ color: #333; }
+
+.value {
+    font-size  : 32px;
+    font-weight: bold;
+}
+
+.value1{
+    font-size: 13px ;
+    
+    
+}
+
+
+.titreee {
+
+    justify-content: center;
+    display        : flex;
+    font-weight    : bold;
+    font-size      : 60px;
+    font-family    : kermit, sans-serif;
+
+}
+
+.soustitree {
+    justify-content: center;
+    display        : flex;
+    font-size      : 20px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #555;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .titreee, .soustitree {
+        font-size: 5vw;
+    }
+}
+
+/* Styles pour l'emploi du temps */
+.edt-controls { display:flex; gap:8px; align-items:center; margin-bottom:12px; }
+.edt-controls input { padding:6px 8px; border-radius:6px; border:1px solid #ccc; }
+    .calendar { max-width:1000px; overflow:auto; margin-left: -20px; }
+/* Responsive: ne pas décaler sur petits écrans */
+@media screen and (max-width: 768px) {
+    .calendar { margin-left: 0; }
+}
+.calendar-header { display:grid; grid-template-columns: 80px repeat(5, 1fr); gap:6px; margin-bottom:6px; }
+.calendar-header div { padding:8px 10px; font-weight:600; background:transparent; }
+.calendar-body { display:block; }
+.calendar-body .row { display:grid; grid-template-columns: 80px repeat(5, 1fr); gap:6px; margin-bottom:6px; }
+.slot-label { background:#f5f7fb; padding:8px 10px; border-radius:8px; display:flex; align-items:center; justify-content:center; }
+.cell { min-height:60px; background: #fff; border-radius:8px; padding:6px; cursor:pointer; border:1px dashed #eee; display:flex; align-items:center; }
+.cell-subject { font-size:13px; color:#222; }
+.help{ margin-top:12px; color:#333; }
